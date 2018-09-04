@@ -1,0 +1,168 @@
+@import "less/global.less";
+.App {
+  display: flex;
+  flex-direction: row;
+  
+  .toolBar {
+    background-color: #fff;
+    width:220px;
+    padding:10px 10px 10px 20px;
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    .tool {
+      width: 24px;
+      height: 24px;
+      border:none;
+      outline: 0;
+      padding: 0;
+      display: inline;
+      margin-bottom: 15px;
+      cursor:pointer;
+      background-size: 200% 100% !important;
+    }
+    .arrow_tool {
+      background-image: url(images/arrow-icon.gif);
+    }
+    .box_tool {
+      background-image: url(images/box-icon.gif);
+    
+    }
+    .line_tool {
+      background-image: url(images/line-icon.gif);
+    
+    }
+    .freeForm_tool {
+      background-image: url(images/freeform-icon.gif);
+    
+    }
+    .erase_tool {
+      background-image: url(images/erase-icon.gif);
+    
+    }
+    .text_tool {
+      background-image: url(images/text-icon.gif);
+    
+    }
+    .btns {
+      margin-top: 15px;
+      .btn{
+        display: inline-block;
+        color: #ff9e22;
+        width: 70px;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        margin-right: 10px;
+      }
+    }
+    
+    /* .select-img {
+      background-image: url(images/select-icon.gif);
+    } */
+    .active {
+      background-position: right;
+    }
+    .line-color, .background-color {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 15px;
+      margin-top: 15px;
+    }
+
+    .line-preview-color, .fill-preview-color {
+      cursor: pointer;
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      background-color: #000;
+      border: 1px solid #ccc;
+    }
+    .fill-preview-color {
+      background-color:rgba(0,0,0,0);
+    }
+    .file-box {
+      text-align: center;
+      color: #ff9e22;
+      width: 140px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+      position: relative;
+
+      label {
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom:0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    .file {
+      opacity:0;
+    }
+    .control-background {
+      margin-top: 15px;
+    }
+    
+  }
+    
+  .canvasBox {
+    width:800px;
+    height:100vh;
+    margin: 0 auto;
+    background-size: 100%;
+    text-align:center;
+    /* position: relative; */
+
+    p {
+      padding-top:30px;
+      padding-bottom: 20px;
+      line-height: 50px;
+      font-size: 30px;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: " ";
+        top: 84px;
+        left: 0;
+        width:800px;
+        height: 16px;
+        background: url(images/x.png) 0 0 no-repeat;
+      }
+
+      &:before {
+        position: absolute;
+        content: " ";
+        top: 101px;
+        left: -16px;
+        width: 16px;
+        height: 500px;
+        z-index: 20;
+        background: url(images/y.png) 0 0 no-repeat;
+      }
+      
+      
+    }
+
+    #myCanvas {
+      cursor: pointer;
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.3);
+      background-repeat: no-repeat;
+    }
+  }
+
+  }
+  
+    
