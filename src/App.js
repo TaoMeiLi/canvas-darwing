@@ -4,7 +4,7 @@ import { } from 'react-bootstrap';
 import './App.less';
 import canvasData from './App_json';
 import LineWidth from './components/lineWidth/index';
-import SetColor from './components/setColor/index';
+/* import SetColor from './components/setColor/index'; */
 
 let myCanvas = null,
   pen = null;
